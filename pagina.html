@@ -1094,40 +1094,43 @@
 </script>
 
 
-  <!-- IMPORTANTE: Cargar Firebase usando CDN -->
+  
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+
+<!-- Inicializar Firebase -->
+<script>
+  // Configuración de Firebase
+  const firebaseConfig = {
+    apiKey: "AIzaSyDz8D2vus826XLPgQ6P7vV_bZ16umkwjYo",
+    authDomain: "tienda-de-celulares-a72c8.firebaseapp.com",
+    projectId: "tienda-de-celulares-a72c8",
+    storageBucket: "tienda-de-celulares-a72c8.firebasestorage.app",
+    messagingSenderId: "710353154355",
+    appId: "1:710353154355:web:a6e64a5ff3cab9f6b10e46",
+    measurementId: "G-HQ70MX9BL4",
+    databaseURL: "https://tienda-de-celulares-a72c8-default-rtdb.firebaseio.com"
+  };
   
-  <!-- Inicializar Firebase -->
-  <script>
-    // Configuración de Firebase
-    const firebaseConfig = {
-      apiKey: "AIzaSyDz8D2vus826XLPgQ6P7vV_bZ16umkwjYo",
-      authDomain: "tienda-de-celulares-a72c8.firebaseapp.com",
-      projectId: "tienda-de-celulares-a72c8",
-      storageBucket: "tienda-de-celulares-a72c8.firebasestorage.app",
-      messagingSenderId: "710353154355",
-      appId: "1:710353154355:web:a6e64a5ff3cab9f6b10e46",
-      measurementId: "G-HQ70MX9BL4"
-    };
-    
-    // Inicializar Firebase
-    firebase.initializeApp(firebaseConfig);
-    console.log("Firebase inicializado desde CDN");
-  </script>
-  
-  <!-- Primero cargar el script de sincronización de usuarios -->
-  <script src="firebase-login-sync.js"></script>
-  
-  <!-- Luego cargar el script de sincronización de datos optimizado -->
-  <script src="firebase-fix-optimizado-v2.js"></script>
-  <script src="facturas-edicion-avanzado.js"></script>
-  
-  <!-- Finalmente los scripts originales de la aplicación -->
-  <script src="factura-utils.js"></script>
-  <script src="script.js"></script>
-  <script src="auth.js"></script>
+  // Inicializar Firebase
+  firebase.initializeApp(firebaseConfig);
+  console.log("Firebase inicializado desde CDN");
+</script>
+
+<!-- Cargar el script de sincronización bidireccional -->
+<script src="firebase-sync-bidireccional.js"></script>
+
+<!-- Cargar el script de sincronización de usuarios -->
+<script src="firebase-login-sync.js"></script>
+
+<!-- Cargar el script de edición de facturas -->
+<script src="facturas-edicion-avanzado-debug.js"></script>
+
+<!-- Finalmente los scripts originales de la aplicación -->
+<script src="factura-utils.js"></script>
+<script src="script.js"></script>
+<script src="auth.js"></script>
 </body>
 </html>
 

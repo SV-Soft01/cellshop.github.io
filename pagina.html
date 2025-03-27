@@ -1095,31 +1095,33 @@
 
 
   
-  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+
+<!-- IMPORTANTE: Cargar Firebase usando CDN -->
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
 
 <!-- Inicializar Firebase -->
 <script>
-  // Configuración de Firebase
-  const firebaseConfig = {
-    apiKey: "AIzaSyDz8D2vus826XLPgQ6P7vV_bZ16umkwjYo",
-    authDomain: "tienda-de-celulares-a72c8.firebaseapp.com",
-    projectId: "tienda-de-celulares-a72c8",
-    storageBucket: "tienda-de-celulares-a72c8.firebasestorage.app",
-    messagingSenderId: "710353154355",
-    appId: "1:710353154355:web:a6e64a5ff3cab9f6b10e46",
-    measurementId: "G-HQ70MX9BL4",
-    databaseURL: "https://tienda-de-celulares-a72c8-default-rtdb.firebaseio.com"
-  };
-  
-  // Inicializar Firebase
-  firebase.initializeApp(firebaseConfig);
-  console.log("Firebase inicializado desde CDN");
+// Configuración de Firebase
+const firebaseConfig = {
+  apiKey: "AIzaSyDz8D2vus826XLPgQ6P7vV_bZ16umkwjYo",
+  authDomain: "tienda-de-celulares-a72c8.firebaseapp.com",
+  projectId: "tienda-de-celulares-a72c8",
+  storageBucket: "tienda-de-celulares-a72c8.firebasestorage.app",
+  messagingSenderId: "710353154355",
+  appId: "1:710353154355:web:a6e64a5ff3cab9f6b10e46",
+  measurementId: "G-HQ70MX9BL4",
+  databaseURL: "https://tienda-de-celulares-a72c8-default-rtdb.firebaseio.com"
+};
+
+// Inicializar Firebase
+firebase.initializeApp(firebaseConfig);
+console.log("Firebase inicializado desde CDN");
 </script>
 
-<!-- Cargar el script de sincronización bidireccional -->
-<script src="firebase-sync-bidireccional.js"></script>
+<!-- Cargar el script de sincronización optimizado con prioridad a Firebase -->
+<script src="firebase-sync-prioridad-incremental.js"></script>
 
 <!-- Cargar el script de sincronización de usuarios -->
 <script src="firebase-login-sync.js"></script>
